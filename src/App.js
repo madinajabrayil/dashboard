@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import LeftMenu from "../src/components/LeftMenu/LeftMenu"
+import Header from '../src/components/Header/Header'
+import DoughnutChart from './components/Charts/DoughnutChart'
+// import SplineAreaChart from './components/Charts/SplineAreaChart'
+import MainPage from './components/MainPage/MainPage'
+import LineChart from './components/Charts/LineChart'
+import CircleBarContainer from './components/CircleBarContainer/CircleBarContainer'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+
+            <div className="menu">
+                
+                <div className="main">
+                    <Header/>
+                    <div className="container">
+                        <div className="spline-chart">
+                            <MainPage/>
+                        </div>
+                        <CircleBarContainer/>
+
+                        <div className="bottom-chart">
+                            <LineChart/>
+                            <DoughnutChart/>
+                        </div>
+
+                    </div>
+
+                </div>
+                <LeftMenu/>
+            </div>
+
+        </div>
+    );
 }
 
 export default App;

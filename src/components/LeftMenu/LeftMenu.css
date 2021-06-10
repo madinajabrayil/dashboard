@@ -1,0 +1,102 @@
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    .menu-section {
+                        background-color: #122a37;
+                        color: #485966;
+                        width: 160px;
+                        text-align: center;
+                        border: 1px solid #19313d;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    
+                    .menu-container {
+                        padding: 35px 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    
+                    .dots {
+                        width: 25px;
+                        height: 5px;
+                        margin: 3px 0;
+                    }
+                    
+                    .logo {
+                        height: 100px;
+                    }
+                    
+                    .menu-item {
+                        height: 100px;
+                        width: 160px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-left: 2px solid transparent;
+                    }
+                    
+                    .menu-text {
+                        padding-top: 10px;
+                        font-family: 'Open Sans';
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+                    
+                    .menu-item:hover {
+                        border-left: 2px solid #3498db;
+                        box-sizing: border-box;
+                    }
+                    
+                    .menu-item:hover .menu-text,
+                    .menu-img {
+                        color: #3498db;
+                    }
+                    
+                    @media (max-width: 992px) {
+                        .menu-section {
+                            width: 100%;
+                        }
+                        .menu-container {
+                            padding: 35px 0;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-around;
+                        }
+                        .dots {
+                            display: none;
+                        }
+                        .menu-item {
+                            width: 60px;
+                            height: 100px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: inherit;
+                            align-items: start;
+                            margin: 0 18px;
+                            border-bottom: 2px solid transparent;
+                        }
+                        .menu-item:hover {
+                            border-bottom: 2px solid #3498db;
+                            border-left: none;
+                            box-sizing: border-box;
+                        }
+                    }
+                    
+                    @media (max-width:320px) {
+                        .menu-container {
+                            padding: 35px 0;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                        }
+                        .logo {
+                            display: none;
+                        }
+                    }

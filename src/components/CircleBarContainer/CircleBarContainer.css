@@ -1,0 +1,57 @@
+.progressBarContainer {
+    margin: 20px 0;
+    border: 1px solid #19313d;
+    font-family: 'Montserrat';
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+    .progressBarContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .progressBarContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.progressBar_box {
+    background-color: #112a37;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressBar_box:nth-child(even) {
+    background-color: #0f2835;
+}
+
+@media screen and (max-width: 1200px) {
+    .progressBar_box {
+        background-color: #0f2835;
+    }
+    .progressBar_box:nth-child(3n+1) {
+        background-color: #112a37;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .progressBar_box {
+        background-color: #112a37;
+    }
+    .progressBar_box:nth-child(even) {
+        background-color: #0f2835;
+    }
+}
+
+.progressBar_title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgba(52, 152, 219, 255);
+}
